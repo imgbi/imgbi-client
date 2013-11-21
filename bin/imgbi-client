@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+var cli = require('cli').enable('status'),
+imgbi = require('..'),
+EOL = require('os').EOL;
+cli.parse({
+  image: ['i', 'Image location', 'file'],
+  remove: ['r', 'URL of file to be removed', 'url'],
+  download: ['d', 'URL of file to downloaded and decrypted', 'url'],
+  output: ['o', 'Location to save file', 'path', '.'],
+  url: ['u', 'URL of img.bi instance', 'url', 'https://img.bi'],
+  norm: ['n', 'Don\'t print removal link'],
+  nolink: ['l', 'Don\'t print link to show image'],
+  autorm: ['a', 'Print autoremove link'],
+  embed: ['e', 'Print embed code']
+});
+
+cli.main(function(args, options) {
+  if (options.image) {
+    imgbi.upload(options.image, options.url, function(err, result) {
+      if (err) {
+        cli.fatal(err);
+      }
+      cli.debug(JSON.stringify(result));
+      if (! options.nolink) {
+        cli.output(result.viewlink + EOL);
+      }
+      if (! options.norm) {
+        cli.output(result.rmlink + EOL);
+      }
+      if (options.autorm) {
+        cli.output(result.autormlink + EOL);
+      }
+      if (options.embed) {
+        cli.output(result.embedcode + EOL);
+      }
+    });
+  }
+  else if (options.remove) {
+    imgbi.remove(options.remove, function(err) {
+      if (err) {
+        cli.fatal(err);
+      }
+      else {
+        cli.ok('Removed');
+      }
+    });
+  }
+  else if (options.download) {
+    imgbi.download(options.download, options.output, function(err, result) {
+      if (err) {
+        cli.fatal(err);
+      }
+      else {
+        cli.ok('Saved as ' + result);
+      }
+    });
+  }
+  else {
+    this.fatal('Nothing to do.');
+  }
+  
+});

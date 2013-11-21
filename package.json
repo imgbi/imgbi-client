@@ -1,0 +1,36 @@
+{
+  "name": "imgbi",
+  "version": "0.0.1",
+  "preferGlobal": true,
+  "description": "Simple command-line client and Node.js library for use img.bi.",
+  "keywords": [
+    "img.bi",
+    "uploader",
+    "downloader",
+    "crypto",
+    "image",
+    "images"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "imgbi-client": "bin/imgbi-client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imgbi/imgbi-client.git"
+  },
+  "author": "Anton Nesterov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imgbi/imgbi-client/issues",
+    "email": "bugs@img.bi"
+  },
+  "dependencies": {
+    "sjcl": "~1.0.0",
+    "cli": "~0.4.5",
+    "datauri": "~0.3.1",
+    "passwordgen": "~0.2.0",
+    "needle": "~0.6.3",
+    "mime": "~1.2.11"
+  }
+}
