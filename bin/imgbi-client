@@ -18,7 +18,7 @@ cli.main(function(args, options) {
   if (options.image) {
     imgbi.upload(options.image, options.url, function(err, result) {
       if (err) {
-        cli.fatal(err);
+        cli.fatal(err.message);
       }
       cli.debug(JSON.stringify(result));
       if (! options.nolink) {

@@ -13,7 +13,7 @@ https://img.bi/#!XqL4IVp!jxJccrgkodebbxlaplteabgtbkllab5tberiWkam
 https://img.bi/rm/#!XqL4IVp!jxJccrgkodebbxlaplteabgtbkllab5tberiWkam!Rl80pmqeXIgRhZz9TQvCrYLAIAi
 
 $ imgbi-client -d 'https://img.bi/#!XqL4IVp!jxJccrgkodebbxlaplteabgtbkllab5tberiWkam' -o images
-OK: Saved
+OK: Saved to XqL4IVp.png
 
 $ imgbi-client -r 'https://img.bi/rm/#!XqL4IVp!jxJccrgkodebbxlaplteabgtbkllab5tberiWkam!Rl80pmqeXIgRhZz9TQvCrYLAIAi'
 OK: Removed
