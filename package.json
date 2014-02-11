@@ -1,6 +1,6 @@
 {
   "name": "imgbi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "preferGlobal": true,
   "description": "Simple command-line client and Node.js library for use img.bi.",
   "keywords": [
@@ -31,6 +31,8 @@
     "datauri": "~0.3.1",
     "passwordgen": "~0.2.0",
     "needle": "~0.6.3",
-    "mime": "~1.2.11"
+    "mime": "~1.2.11",
+    "tmp": "0.0.23",
+    "imagemagick": "~0.1.3"
   }
 }
