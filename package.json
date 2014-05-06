@@ -1,6 +1,6 @@
 {
   "name": "imgbi",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "preferGlobal": true,
   "description": "Simple command-line client and Node.js library for use img.bi.",
   "keywords": [
